@@ -1,3 +1,3 @@
 <h1> Welcome to Devops class </h1>
-<h1> Welcome to conatiner demo was successfully tested </h1>
-<h3> this is for CD <h3>
+<h5> Welcome to conatiner demo was successfully tested </h5>
+<h2> this is for CD <h2>
