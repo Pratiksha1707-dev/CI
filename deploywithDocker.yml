@@ -9,7 +9,7 @@
       shell: docker login -u pratikshasinghshs@gmail.com -p Pratiksha@shs pratikshahost.jfrog.io/  
     
     - name: pull an image
-      shell: docker pull pratikshahost.jfrog.io/appa/frontend/test-managment:{{ BUILD_NUMBER }}
+      shell: docker pull pratikshahost.jfrog.io/docker-trial/appa:{{ BUILD_NUMBER }}
 
     - name: remove container
       shell: docker rm -f devopsAppDeploy
