@@ -5,8 +5,13 @@
     build_number: '{{ BUILD_NUMBER }}'
   tasks:
       
-    - name: login to jfrog
-      shell: docker login -u pratikshasinghshs@gmail.com -p Pratiksha@shs pratikshahost.jfrog.io/  
+    - name: Login to JFrog
+  shell: |
+    echo "{{ jfrog_password }}" | docker login -u "{{ jfrog_username }}" --password-stdin pratikshahost.jfrog.io
+  environment:
+    jfrog_username: "pratikshasinghshs@gmail.com"
+    jfrog_password: "Pratiksha@shs"
+  
     
     - name: pull an image
       shell: docker pull pratikshahost.jfrog.io/docker-trial/appa:{{ BUILD_NUMBER }}
